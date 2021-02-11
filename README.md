@@ -1,1 +1,0 @@
-# draftshot.app
