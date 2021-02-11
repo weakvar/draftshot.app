@@ -3,7 +3,7 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 16px;
-    letter-spacing: -0.32px;
+    letter-spacing: -0.08px;
     color: $white;
     text-decoration: none;
     background-color: $pink;
@@ -12,5 +12,12 @@
 
     &:hover {
         opacity: 0.85;
+    }
+
+    @media (min-width: $phablet-width) {
+        padding: 16px 20px;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: -0.32px;
     }
 }
