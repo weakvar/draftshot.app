@@ -67,6 +67,10 @@
         @media (min-width: $laptop-width) {
             max-width: 760px;
         }
+
+        @media (min-width: $desktop-width) {
+            max-width: 840px;
+        }
     }
 
     &__description {
@@ -95,6 +99,10 @@
 
         @media (min-width: $laptop-width) {
             max-width: 760px;
+        }
+
+        @media (min-width: $desktop-width) {
+            max-width: 620px;
         }
     }
 

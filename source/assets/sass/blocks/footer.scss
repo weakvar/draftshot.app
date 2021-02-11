@@ -34,6 +34,10 @@
         @media (min-width: $laptop-width) {
             width: 1160px;
         }
+
+        @media (min-width: $laptop-width) {
+            width: 1280px;
+        }
     }
 
     &__inner {
