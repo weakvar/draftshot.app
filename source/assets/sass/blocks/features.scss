@@ -8,6 +8,11 @@
         padding: 240px 0 160px 0;
     }
 
+    @media (min-width: $tablet-width) {
+        margin-top: -256px;
+        padding: 320px 0 192px 0;
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -29,6 +34,14 @@
             font-size: 28px;
             line-height: 42px;
             letter-spacing: 0.38px;
+        }
+
+        @media (min-width: $tablet-width) {
+            margin: 0 0 64px;
+            max-width: 860px;
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 0.37px;
         }
     }
 

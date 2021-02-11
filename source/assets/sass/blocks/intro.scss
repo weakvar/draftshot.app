@@ -5,6 +5,10 @@
         padding: 40px 0 24px;
     }
 
+    @media (min-width: $tablet-width) {
+        padding: 64px 0;
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -23,6 +27,13 @@
             margin-bottom: 20px;
             max-width: 80px;
             border-radius: 20px;
+        }
+
+        @media (min-width: $tablet-width) {
+            margin-bottom: 32px;
+            max-width: 128px;
+            border-radius: 32px;
+            border-width: 2px;
         }
 
         & img {
@@ -45,6 +56,13 @@
             line-height: 36px;
             letter-spacing: 0.38px;
         }
+
+        @media (min-width: $tablet-width) {
+            max-width: 620px;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 0.41px;
+        }
     }
 
     &__description {
@@ -62,14 +80,30 @@
             line-height: 28px;
             letter-spacing: -0.45px;
         }
+
+        @media (min-width: $tablet-width) {
+            margin: 0 0 64px;
+            max-width: 620px;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.07px;
+        }
     }
 
     &__app-mockup {
         margin-bottom: 32px;
-        filter: drop-shadow(0px 20px 40px rgba(234, 76, 137, 0.15));
+        filter: drop-shadow(0px 16px 32px rgba(234, 76, 137, 0.15));
 
         @media (min-width: $phablet-width) {
             max-width: 354px;
+            margin-bottom: 40px;
+            filter: drop-shadow(0px 20px 40px rgba(234, 76, 137, 0.15));
+        }
+
+        @media (min-width: $tablet-width) {
+            max-width: 100%;
+            margin-bottom: 48px;
+            filter: drop-shadow(0px 32px 64px rgba(234, 76, 137, 0.15));
         }
 
         & img {
