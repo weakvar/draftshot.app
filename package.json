@@ -25,5 +25,8 @@
     "gulp-webp": "^4.0.1",
     "normalize.css": "^8.0.1",
     "postcss": "^8.2.5"
-  }
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
 }
