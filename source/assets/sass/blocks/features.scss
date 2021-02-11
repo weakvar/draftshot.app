@@ -43,6 +43,10 @@
             line-height: 60px;
             letter-spacing: 0.37px;
         }
+
+        @media (min-width: $laptop-width) {
+            max-width: 872px;
+        }
     }
 
     &__button {

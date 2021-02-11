@@ -63,6 +63,10 @@
             line-height: 40px;
             letter-spacing: 0.41px;
         }
+
+        @media (min-width: $laptop-width) {
+            max-width: 760px;
+        }
     }
 
     &__description {
@@ -87,6 +91,10 @@
             font-size: 24px;
             line-height: 32px;
             letter-spacing: 0.07px;
+        }
+
+        @media (min-width: $laptop-width) {
+            max-width: 760px;
         }
     }
 

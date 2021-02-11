@@ -30,6 +30,10 @@
         @media (min-width: $tablet-width) {
             width: 940px;
         }
+
+        @media (min-width: $laptop-width) {
+            width: 1160px;
+        }
     }
 
     &__inner {

@@ -11,4 +11,9 @@
     @media (min-width: $tablet-width) {
         width: 940px;
     }
+
+    @media (min-width: $laptop-width) {
+        width: 1160px;
+        padding: 0 20px;
+    }
 }
