@@ -10,6 +10,7 @@ var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var deploy = require("gulp-gh-pages");
 
 gulp.task("del", function () {
@@ -77,8 +78,19 @@ gulp.task("imagemin", function () {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [
+          {convertStyleToAttrs: false},
+          {cleanupIDs: false}
+        ]
+      })
     ]))
+    .pipe(gulp.dest("build/assets/img"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("build/assets/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/assets/img"));
 });
 
@@ -87,5 +99,5 @@ gulp.task('deploy', function () {
     .pipe(deploy())
 });
 
-gulp.task("build", gulp.series("del", "copy", "normalize", "sass", "imagemin"));
+gulp.task("build", gulp.series("del", "copy", "normalize", "sass", "imagemin", "webp"));
 gulp.task("start", gulp.series("build", "server"));
