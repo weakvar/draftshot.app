@@ -1,10 +1,14 @@
 .link {
-    color: $pink;
+    color: $black;
     text-decoration: none;
-    box-shadow: 0 1px rgba($color: $pink, $alpha: 0.25);
-    transition: opacity .2s ease-in-out;
 
-    &:hover {
-        opacity: 0.75;
+    &[href]:not(:empty) {
+        color: $pink;
+        box-shadow: 0 1px rgba($color: $pink, $alpha: 0.25);
+        transition: opacity .2s ease-in-out;
+
+        &:hover {
+            opacity: 0.75;
+        }
     }
 }

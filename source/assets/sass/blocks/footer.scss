@@ -11,6 +11,23 @@
         padding: 256px 0 40px;
     }
 
+    &_type-floating {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        padding: 32px 0 32px;
+        background: none;
+
+        @media (min-width: $phablet-width) {
+            padding: 40px 0 40px;
+        }
+        
+        @media (min-width: $tablet-width) {
+            padding: 40px 0 40px;
+        }
+    }
+
     &::before {
         top: 0;
         left: 0;
@@ -40,6 +57,10 @@
         }
     }
 
+    &_type-floating::before {
+        background-color: rgba($color: $pink, $alpha: 0.08);
+    }
+
     &__inner {
         display: flex;
         flex-direction: column;
@@ -49,6 +70,12 @@
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
+        }
+    }
+
+    &_type-floating &__inner {
+        @media (min-width: $phablet-width) {
+            flex-direction: column;
         }
     }
 

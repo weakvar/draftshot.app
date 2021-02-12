@@ -1,0 +1,35 @@
+.utility {
+    width: 100vw;
+    height: 100vh;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: inherit;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 36px;
+        color: $light-black;
+        text-align: center;
+        letter-spacing: 0.07px;
+
+        @media (min-width: $phablet-width) {
+            max-width: 478px;
+            font-size: 28px;
+            line-height: 42px;
+            letter-spacing: 0.38px;
+        }
+
+        @media (min-width: $tablet-width) {
+            max-width: 620px;
+            font-size: 40px;
+            line-height: 60px;
+            letter-spacing: 0.37px;
+        }
+    }
+}
