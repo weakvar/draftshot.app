@@ -22,7 +22,7 @@ gulp.task("copy", function () {
     "source/assets/fonts/**/*.{woff,woff2}",
     "source/assets/img/**",
     "source/**/*.html",
-    "source/favicon-*.{svg,png}"
+    "source/*.{svg,png}"
   ], {
     base: "source"
   })
